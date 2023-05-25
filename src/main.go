@@ -1,11 +1,9 @@
 package main
 
 import (
-	"jk404.cn/tutorial"
+	"tutorial"
 )
 
-func main()  {
-
-	tutorial.Dup1()
+func main() {
+	tutorial.NewFunc()
 }
-

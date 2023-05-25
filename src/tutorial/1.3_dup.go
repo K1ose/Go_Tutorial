@@ -3,7 +3,6 @@ package tutorial
 import (
 	"bufio"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"strings"
 )
@@ -49,6 +48,7 @@ func Dup2() {
 func countLines(f *os.File, counts map[string]int) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
+		// fmt.Println(input.Text())
 		counts[input.Text()]++
 	}
 	// NOTE: ignoring potential errors from input.Err()
@@ -57,7 +57,7 @@ func countLines(f *os.File, counts map[string]int) {
 func Dup3() {
 	counts := make(map[string]int)
 	for _, filename := range os.Args[1:] {
-		data, err := ioutil.ReadFile(filename)
+		data, err := os.ReadFile(filename)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "dup3: %v\n", err)
 			continue

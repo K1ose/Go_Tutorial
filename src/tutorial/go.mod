@@ -1,3 +1,3 @@
-module jk404.cn/tutorial
+module tutorial
 
 go 1.20
