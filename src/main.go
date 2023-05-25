@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	tutorial.NewFunc()
+	tutorial.Type()
 }
