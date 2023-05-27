@@ -39,7 +39,7 @@ func VariableNormal() {
 	/* 简短变量声明语句的形式可用于声明和初始化局部变量 */
 	simple_statement := "It is simple."
 	freq := rand.Float64() * 2.0
-	fmt.Printf("%s, %.2f", simple_statement, freq)
+	fmt.Printf("%s %.2f\n", simple_statement, freq)
 	/* 简短变量声明左边的变量可能并不是全部都是刚刚声明的。如果有一些已经在相同的词法域声明过了（§2.7），那么简短变量声明语句对这些已经声明过的变量就只有赋值行为了，但是需要同时声明一个新的变量 */
 	new_v, freq := 1.0, 2.0 // 对freq赋值，同时声明一个新的变量
 	/* 直接freq:=2.0 会报错 */

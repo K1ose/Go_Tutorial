@@ -31,4 +31,5 @@ func Type() {
 	fmt.Println(cel.String())
 }
 
+/* 声明了Celsius类型的一个名叫String的方法，该方法返回该类型对象c带着°C温度单位的字符串 */
 func (c Celsius) String() string { return fmt.Sprintf("result is %g°C", c) }
