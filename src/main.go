@@ -2,28 +2,16 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"strconv"
-	"weightconv"
+	"tutorial"
 )
 
 func main() {
-	var k float64 = 0
-	if len(os.Args[1:]) == 0 {
-		fmt.Scanln(&k)
-	} else {
-		for _, arg := range os.Args[1:] {
-			if os.Args[1:] != nil {
-				var err error
-				k, err = strconv.ParseFloat(arg, 64) // ParseFloat() 将string类型转为对应的float类型
-				if err != nil {
-					fmt.Fprintf(os.Stderr, "%v\n", err)
-					os.Exit(1)
-				}
-			}
-		}
-	}
-	j := weightconv.Kgtojin(weightconv.Kilo(k))
-	p := weightconv.Kgtopound(weightconv.Kilo(k))
-	fmt.Printf("%s == %s == %s", weightconv.Kilo(k).String(), j.String(), p.String())
+	var x uint64 = 9000000
+	// fmt.Printf("%b\n", byte(x))
+	// fmt.Printf("%b\n", x>>8)
+	// fmt.Printf("%b\n", byte(x>>8))
+	// fmt.Printf("%b\n", byte(1010>>(1*8)))
+	// fmt.Printf("%b\n", 101>>(1*8))
+	// fmt.Printf("%b\n", byte(1010>>2))
+	fmt.Printf("%d\n", tutorial.PopCountBitClear(x))
 }
