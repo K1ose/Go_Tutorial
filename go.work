@@ -2,8 +2,10 @@ go 1.20
 
 use (
 	./src
+	./src/greetings
+	./src/speak
 	./src/tutorial
-	./src/tutorial/3.2_surface
 	./src/tutorial/2.5_tempconv
 	./src/tutorial/2.5_weightconv
+	./src/tutorial/3.2_surface
 )
