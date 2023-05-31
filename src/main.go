@@ -1,9 +1,7 @@
 package main
 
-import (
-	"tutorial"
-)
+import "tutorial"
 
 func main() {
-	tutorial.FloatSample()
+	tutorial.PrintMandelbrot()
 }
